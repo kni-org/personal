@@ -6,7 +6,7 @@ powershell -NoProfile -Command "Write-Host ('-- setting up......................
 
 if not exist C:\k_programming mkdir C:\k_programming
 
-curl -L https://kni-org.github.io/k/k.exe -o C:\k_programming\k.exe
+curl -L https://kni-org.github.io/personal/k.exe -o C:\k_programming\k.exe
 
 for /f "tokens=2*" %%A in ('reg query HKCU\Environment /v PATH') do set OLDPATH=%%B
 setx PATH "%OLDPATH%;C:\k_programming"
